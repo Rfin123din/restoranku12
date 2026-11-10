@@ -1,0 +1,16 @@
+github kelas fulstack
+https://github.com/lunadiotic?tab=repositories
+
+pembayaran via Qris
+simulator.sandbox.midtrans.com
+
+membuar erd
+dbdiagram.io 
+
+install laravel buat diterminal vscode
+composer global require laravel/installer 
+
+kemudian buat project 
+laravel new restoranku
+
+https://github.com/copilot?utm_source=chatgpt.com
