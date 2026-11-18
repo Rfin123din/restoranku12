@@ -38,3 +38,7 @@ Laravel Blade Formatter	    Merapikan kode Blade
 Prettier	                Format kode
 GitLens	                    Memantau perubahan Git
 
+jalankan git untuk kirim file ke github
+
+git push origin master
+
