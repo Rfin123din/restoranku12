@@ -1,16 +1,40 @@
 github kelas fulstack
 https://github.com/lunadiotic?tab=repositories
 
+https://github.com/adityafakhrii/restoranku12
+
 pembayaran via Qris
 simulator.sandbox.midtrans.com
 
-membuar erd
-dbdiagram.io 
+membuat erd
+dbdiagram.io
 
 install laravel buat diterminal vscode
-composer global require laravel/installer 
+composer global require laravel/installer
 
-kemudian buat project 
+kemudian buat project
 laravel new restoranku
 
 https://github.com/copilot?utm_source=chatgpt.com
+
+  =>  Template Name    : Fruitables - Vegetable Website Template
+
+  =>  Template Link    : https://htmlcodex.com/vegetable-website-template
+
+  =>  Template License : https://htmlcodex.com/license (or read the LICENSE.txt file)
+
+  =>  Template Author  : HTML Codex
+
+  =>  Author Website   : https://htmlcodex.com
+
+  extension yang digunakan
+  4. Rekomendasi untuk Laravel 12
+Saya menyarankan menggunakan Error Lens bersama extension berikut:
+Extension	                Fungsi
+Error Lens	                Menampilkan error langsung di kode
+PHP Intelephense	        Autocomplete dan analisis PHP
+Laravel Extra Intellisense	Autocomplete Laravel
+Laravel Blade Formatter	    Merapikan kode Blade
+Prettier	                Format kode
+GitLens	                    Memantau perubahan Git
+

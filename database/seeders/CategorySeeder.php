@@ -8,20 +8,12 @@ use illuminate\Support\Facades\DB;
 
 class CategorySeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
+
     public function run(): void
     {
         $categories = [
-            [
-                'cat_name' => 'Makanan',
-                'description' => 'Kategori untuk makanan',
-            ],
-            [
-                'cat_name' => 'Minuman',
-                'description' => 'Kategori untuk minuman',
-            ]
+            ['cat_name' => 'Makanan','description' => 'Kategori untuk makanan',],
+            ['cat_name' => 'Minuman','description' => 'Kategori untuk minuman',],
         ];
 
         DB::table('categories')->insert($categories);
