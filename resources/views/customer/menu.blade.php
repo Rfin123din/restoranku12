@@ -31,10 +31,11 @@
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
                                                     <p class="text-dark fs-5 fw-bold mb-0">
                                                         {{ 'Rp' . number_format($item->price, 0, ',', '.') }}</p>
-                                                    <a href="#" onclick="addToCart({{ $item->id }})"
-                                                        class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                            class="fa fa-shopping-bag me-2 text-primary"></i> Tambah
-                                                        Keranjang</a>
+                                                    <button type="button" onclick="addToCart({{ $item->id }})"
+                                                        class="btn border border-secondary rounded-pill px-3 text-primary">
+                                                        <i class="fa fa-shopping-bag me-2 text-primary"></i>
+                                                        Tambah Keranjang
+                                                    </button>
                                                 </div>
                                             </div>
                                         </div>
@@ -50,26 +51,42 @@
     <!-- Fruits Shop End-->
 @endsection
 
+
 @section('script')
     <script>
-        function addToCart(menuId) {
-            fetch("{{ route('cart.add') }}", {
+        async function addToCart(menuId) {
+            try {
+                const response = await fetch("{{ route('cart.add') }}", {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
+                        'Accept': 'application/json',
                         'X-CSRF-TOKEN': '{{ csrf_token() }}'
                     },
                     body: JSON.stringify({
                         id: menuId
                     })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    alert(data.message)
-                })
-                .catch((error) => {
-                    console.error('Error:', error);
                 });
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    console.error('Server Error:', data);
+                    alert(data.message || 'Terjadi kesalahan pada server.');
+                    return;
+                }
+
+                if (data.status === 'success') {
+                    alert(data.message);
+                    console.log('Isi keranjang:', data.cart);
+                } else {
+                    alert(data.message);
+                }
+
+            } catch (error) {
+                console.error('Fetch Error:', error);
+                alert('Gagal terhubung ke server.');
+            }
         }
     </script>
 @endsection

@@ -41,6 +41,9 @@
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
     </script>
+
+    <!-- Custom Script dari setiap halaman -->
+    @yield('script')
 </body>
 
 </html>
